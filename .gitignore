@@ -482,3 +482,4 @@ $RECYCLE.BIN/
 *.swp
 
 local.settings.json
+appsettings.json
