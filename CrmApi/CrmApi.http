@@ -1,0 +1,48 @@
+@baseUrl = https://localhost:7149
+
+### Get all customers
+GET {{baseUrl}}/customers
+
+### Create a customer
+POST {{baseUrl}}/customers
+Content-Type: application/json
+
+{
+  "name": "Johan Svensson",
+  "title": "HR",
+  "phone": "0701234567",
+  "email": "johan@example.com",
+  "address": "Storgatan 1, Göteborg",
+  "responsibleSeller": {
+    "name": "Erik Lindgren",
+    "phone": "0709876543",
+    "email": "erik@seller.com"
+  }
+}
+
+### Search by customer name
+GET {{baseUrl}}/customers/search/name/anna
+
+### Search by seller name
+GET {{baseUrl}}/customers/search/seller/erik
+
+### Update customer
+PUT {{baseUrl}}/customers/ce1d9f50-555b-4391-a32f-4cb3419c3764
+Content-Type: application/json
+
+{
+  "id": "ce1d9f50-555b-4391-a32f-4cb3419c3764",
+  "name": "Johan Svensson",
+  "title": "HrPlus",
+  "phone": "0701234567",
+  "email": "Johan@example.com",
+  "address": "Storgatan 1, Stockholm",
+  "responsibleSeller": {
+    "name": "Erik Lindgren",
+    "phone": "0709876543",
+    "email": "erik@seller.com"
+  }
+}
+
+### Delete customer
+DELETE {{baseUrl}}/customers/2a490834-d296-4607-81a5-68695a62e1b9

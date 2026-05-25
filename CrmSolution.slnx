@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CrmApi/CrmApi.csproj" Id="10428ec8-2372-411c-8789-e199ae820735" />
+  <Project Path="CrmFunction/CrmFunction.csproj" Id="dc429a3c-5e93-42f3-b532-57750c1bf286" />
+</Solution>
